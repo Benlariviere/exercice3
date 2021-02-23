@@ -537,6 +537,47 @@ a:hover, a:active {
   outline: 0;
 }
 
+.main-navigation a {
+  color: #fbff01;
+}
+
+.main-navigation a:visited {
+  color: #70d610;
+}
+
+.main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
+  color: #dddfc8;
+}
+
+.main-navigation a:focus {
+  outline: thin dotted;
+}
+
+.main-navigation a:hover, .main-navigation a:active {
+  outline: 0;
+}
+
+.site-title a {
+  color: #1f13c7;
+  margin-left: 3rem;
+}
+
+.site-title a:visited {
+  color: #425caf;
+}
+
+.site-title a:hover, .site-title a:focus, .site-title a:active {
+  color: #119efc;
+}
+
+.site-title a:focus {
+  outline: thin dotted;
+}
+
+.site-title a:hover, .site-title a:active {
+  outline: 0;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -621,6 +662,31 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+body {
+  overflow-x: hidden;
+}
+
+.no-sidebar .site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "main" "footer";
+}
+
+/*
+	#page - .site
+		#masthead - .site-header
+			.site-branding
+				.site-title
+				.site-description
+			#site-navigation - .main-navigation
+		#primary - .site-main
+		#secondary - widget-area
+		#colophon - .ste-footer
+*/
+.site-branding, #primary, #colophon {
+  margin-left: 3rem;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -636,6 +702,9 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
+  background-color: #005;
+  position: absolute;
+  width: 100%;
 }
 
 .main-navigation ul ul {
@@ -660,6 +729,7 @@ textarea {
 
 .main-navigation ul ul a {
   width: 200px;
+  margin-left: 3rem;
 }
 
 .main-navigation ul li:hover > ul,
@@ -676,18 +746,56 @@ textarea {
   text-decoration: none;
 }
 
+/*----------------------------------------------------
+Bouton Burger
+-----------------------------------------------------*/
+.menu-toggle {
+  padding: 0rem;
+  border: 0;
+  margin-left: 3rem;
+  transition: transform .20s;
+  transform: rotate(0);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background: #ffffff;
+}
+
+.menu-toggle:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+.menu-toggle:active {
+  transform: scale(0.99);
+}
+
+.main-navigation.toggled .menu-toggle {
+  transform: rotate(90deg);
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
+/*___________________________________________________________________________________
+Version Tablet
+___________________________________________________________________________________*/
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
   }
-  .main-navigation ul {
+  .main-navigation.toggled ul
+.main-navigation ul {
     display: flex;
+    height: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    position: static;
+    width: 100vw;
   }
 }
 
@@ -933,5 +1041,56 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+/* Local
+--------------------------------------------- */
+.site-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
+  font-weight: bold;
+  color: #003;
+  margin-bottom: 0;
+}
+
+.site-title a {
+  text-decoration: none;
+}
+
+.site-description {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 3.5rem);
+  font-weight: normal;
+  color: #003;
+  margin-top: 0;
+}
+
+.accueil {
+  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 3.5rem);
+}
+
+.accueil ul {
+  list-style-type: none;
+}
+
+/* Carrousel
+--------------------------------------------- */
+.carrousel1 {
+  display: flex;
+  width: 300vw;
+  height: 20vh;
+  transition: transform .5s;
+}
+
+.carrousel1 div:nth-of-type(1) {
+  background-color: #be4343;
+}
+
+.carrousel1 div:nth-of-type(2) {
+  background-color: #be4343;
+}
+
+.carrousel1 div:nth-of-type(3) {
+  background-color: #be4343;
 }
 /*# sourceMappingURL=style.css.map */
