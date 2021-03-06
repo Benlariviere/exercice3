@@ -57,8 +57,9 @@
 				<button id="deux">2</button>
 				<button id="trois">3</button>
 				<?php endif ?>
+				
 				<!--FIn du carrousel -->
-
+		
 
 
 		<nav id="site-navigation" class="main-navigation">

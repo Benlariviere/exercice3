@@ -114,14 +114,15 @@ ________________________________________________________________________________
 	.menu-toggle {
 		display: none;
 	}
-.main-navigation.toggled ul
+.main-navigation.toggled ul,
 	.main-navigation ul {
 		display: flex;
+		flex-direction: row;
 		height: 2rem;
 		justify-content: space-around;
 		align-items: center;
-		position: static;
-		width: 100vw;
+		//position: static;
+		width: 100%;
 	}
 }
 
