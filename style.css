@@ -1095,6 +1095,28 @@ menu tablet
     }
 }
 */
+body.home {
+  height: 100vh;
+  width: 100vw;
+}
+
+body.home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 800px) {
+  body.home::after {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+}
+
 .list-cours {
   display: flex;
   flex-direction: column;
@@ -1102,7 +1124,9 @@ menu tablet
 
 .list-cours section {
   display: flex;
-  flex-direction: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .list-cours section article {
@@ -1110,8 +1134,15 @@ menu tablet
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 90%;
   border: 1px solid #aaa;
+}
+
+@media (min-width: 800px) {
+  .list-cours section article {
+    justify-content: space-between;
+    width: 30%;
+  }
 }
 
 .list-cours section article p {
@@ -1144,14 +1175,14 @@ menu tablet
 }
 
 .carrousel div:nth-of-type(1) {
-  background-color: #be4343;
+  background-color: #fc6fdd;
 }
 
 .carrousel div:nth-of-type(2) {
-  background-color: #be4343;
+  background-color: #97fc6f;
 }
 
 .carrousel div:nth-of-type(3) {
-  background-color: #be4343;
+  background-color: #6fa7fc;
 }
 /*# sourceMappingURL=style.css.map */
