@@ -1080,40 +1080,78 @@ menu tablet
   text-decoration: none;
 }
 
-.site-description {
-  font-family: "Josefin Sans", sans-serif;
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 3.5rem);
-  font-weight: normal;
-  color: #003;
-  margin-top: 0;
+/*
+.site-description{
+    font-family: $font__title;
+    font-size: clamp(.8rem, -0.875rem + 8.333vw, 3.5rem);
+    font-weight: normal;
+    color: #003;
+    margin-top: 0;
+}
+.accueil{
+    font-size: clamp(.8rem, -0.875rem + 8.333vw, 3.5rem);
+    ul{
+        list-style-type: none;
+    }
+}
+*/
+.list-cours {
+  display: flex;
+  flex-direction: column;
 }
 
-.accueil {
-  font-size: clamp(0.8rem, -0.875rem + 8.333vw, 3.5rem);
+.list-cours section {
+  display: flex;
+  flex-direction: wrap;
 }
 
-.accueil ul {
-  list-style-type: none;
+.list-cours section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  border: 1px solid #aaa;
+}
+
+.list-cours section article p {
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.list-cours section article a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Carrousel
 --------------------------------------------- */
-.carrousel1 {
+.carrousel {
   display: flex;
   width: 300vw;
   height: 20vh;
   transition: transform .5s;
+  justify-content: center;
 }
 
-.carrousel1 div:nth-of-type(1) {
+.carrousel div {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+}
+
+.carrousel div:nth-of-type(1) {
   background-color: #be4343;
 }
 
-.carrousel1 div:nth-of-type(2) {
+.carrousel div:nth-of-type(2) {
   background-color: #be4343;
 }
 
-.carrousel1 div:nth-of-type(3) {
+.carrousel div:nth-of-type(3) {
   background-color: #be4343;
 }
 /*# sourceMappingURL=style.css.map */

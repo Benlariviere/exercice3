@@ -1,10 +1,18 @@
-.carrousel1{
+.carrousel{
     display: flex;
     width: 300vw;
     height: 20vh;
     transition: transform .5s;
+    justify-content: center;
     div{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+      //  font-size: clamp(2rem, #{"-0.875rem + 8.333vw"}, 4rem);
+
+        color: blue;
 
     
     &:nth-of-type(1){
