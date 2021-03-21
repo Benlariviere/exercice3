@@ -23,15 +23,15 @@ text-decoration: none;
     }
 }
 */
-body.home {
+/*body.home {
 
     height: 100vh;
     width: 100vw;
 
-}
+}*/
 
 body.home::after {
-    content: "";
+   content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -62,7 +62,8 @@ body.home::after {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 30%;
+        
         border: 1px solid #aaa;
 
             @include tablette{

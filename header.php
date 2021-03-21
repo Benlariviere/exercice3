@@ -53,9 +53,11 @@
 					<div>2</div>
 					<div>3</div>
 				</section>
-				<button id="un"><input name="radCarrousel" type="radio">1</button>
-				<button id="deux" ><input name="radCarrousel"  type="radio">2</button>
-				<button id="trois"><input name="radCarrousel"  type="radio">3</button>
+				<section class="boutons">
+				<button id="un"><input name="radCarrousel" type="radio"></button>
+				<button id="deux" ><input name="radCarrousel"  type="radio"></button>
+				<button id="trois"><input name="radCarrousel"  type="radio"></button>
+				</section>
 				<?php endif ?>
 				
 				<!--FIn du carrousel -->

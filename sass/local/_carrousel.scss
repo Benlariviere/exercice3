@@ -28,3 +28,45 @@
 }
 
 }
+
+/*-----------------------------------------------------------------
+------------------- Les boutons radios--------------------------*/
+.boutons {
+
+
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 100vw; 
+    background-color: black;
+    
+    
+    :nth-child(1),
+    :nth-child(2),
+    :nth-child(3) {
+        margin: 32px;
+        width: 3rem;
+        height: 3rem;
+    }
+
+}
+
+
+
+
+
+
+
+#un,#deux,#trois {
+    background-color: #A8DADC;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
