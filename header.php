@@ -49,9 +49,9 @@
 		<?php
 		if(is_front_page()): ?>
 				<section class="carrousel">
-					<div>1</div>
-					<div>2</div>
-					<div>3</div>
+					<div>Bienvenue</div>
+					<div>Sur Ma</div>
+					<div>Page</div>
 				</section>
 				<section class="boutons">
 				<button id="un"><input name="radCarrousel" type="radio"></button>
