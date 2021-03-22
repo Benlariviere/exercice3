@@ -72,6 +72,7 @@
 		display: block;
 		text-decoration: none;
 		padding: .5rem;
+		
 	}
 
 	.current_page_item > a,
@@ -85,8 +86,8 @@ Bouton burger
 ------------------------------------------------------------------------------*/
 .menu-toggle {
 	padding :0;
-//	transition : transform .25s;
-//	transform : rotate(0deg);
+	transition : transform .25s;
+	transform : rotate(0deg);
 	border : 0;
 }
 .menu-toggle:hover,
@@ -127,13 +128,21 @@ menu tablet
 		position : static;
 		justify-content: space-around;
 		a[href="#"]::after{
-			display: none;
+		//	display: none;
+			content: "\2B9E";
+			
 		}
 		li:hover ul {
 			display: block;
 			position: absolute;
 			width: 300px;
 			height: 500px;
+			a[href="#"]::after{
+				//	display: none;
+					content: "\2B9F";
+					
+				}
+
 		}
 		ul{
 			display: none;

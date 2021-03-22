@@ -763,6 +763,8 @@ Bouton burger
 ------------------------------------------------------------------------------*/
 .menu-toggle {
   padding: 0;
+  transition: transform .25s;
+  transform: rotate(0deg);
   border: 0;
 }
 
@@ -805,7 +807,7 @@ menu tablet
   }
   .main-navigation.toggled ul a[href="#"]::after,
   .main-navigation ul a[href="#"]::after {
-    display: none;
+    content: "\2B9E";
   }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {
@@ -813,6 +815,10 @@ menu tablet
     position: absolute;
     width: 300px;
     height: 500px;
+  }
+  .main-navigation.toggled ul li:hover ul a[href="#"]::after,
+  .main-navigation ul li:hover ul a[href="#"]::after {
+    content: "\2B9F";
   }
   .main-navigation.toggled ul ul,
   .main-navigation ul ul {
