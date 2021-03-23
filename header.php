@@ -9,6 +9,9 @@
  * @package theme-4w4
  */
 
+
+ /* Tp1 Fonctionnel*/
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
