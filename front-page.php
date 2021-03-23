@@ -10,6 +10,19 @@
 get_header();
 ?>
 
+
+<section class="carrousel">
+					<div>Bienvenue</div>
+					<div>Sur Ma</div>
+					<div>Page</div>
+</section>
+<section class="boutons">
+				<button id="un"><input name="radCarrousel" type="radio"></button>
+				<button id="deux" ><input name="radCarrousel"  type="radio"></button>
+				<button id="trois"><input name="radCarrousel"  type="radio"></button>
+</section>
+
+
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
