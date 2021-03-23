@@ -1,31 +1,55 @@
-.carrousel{
+.carrousel_2{
     display: flex;
     width: 300vw;
     height: 20vh;
     transition: transform .5s;
     justify-content: center;
-    div{
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+     .slide__conteneur{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
 
-        font-size: clamp(2rem, #{"-0.875rem + 8.333vw"}, 4rem);
+            .slide{
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-        color: black;
+                font-size: clamp(2rem, #{"-0.875rem + 8.333vw"}, 4rem);
+
+                color: black;
 
     
-    &:nth-of-type(1){
-        background-color:#082E10;
-    }
-    &:nth-of-type(2){
-        background-color: #537800;
-    }
-    &:nth-of-type(3){
-        background-color: #A3CF25;
-    }
+                &:nth-of-type(1){
+                    background-color:#082E10;
+                }
+                &:nth-of-type(2){
+                    background-color: #537800;
+                }
+                &:nth-of-type(3){
+                    background-color: #A3CF25;
+                }
+                img{
+                    display: block;
+                }
+                .slide__info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    p{
+                        font-size: .8rem;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                    }
 
-}
+
+                }
+
+            }
 
 }
 
@@ -75,3 +99,4 @@
 }
 
 
+}

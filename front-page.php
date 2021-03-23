@@ -12,9 +12,17 @@ get_header();
 
 
 <section class="carrousel_2">
-					<div>Bienvenue</div>
-					<div>Sur Ma</div>
-					<div>Page</div>
+					<article class="slide__conteneur">
+						<div class="slide">
+							<img src="" alt="">
+							<div class="slide__info"></div>
+								<p>582-4W4-90H-Web</p>
+								<p>Conception d'interface et developpement Web</p>
+								<p>Session : 4</p>
+							</div>
+					</article>
+					<article></article>
+					<article>Page</article>
 </section>
 <section class="boutons">
 				<button id="un"><input name="radCarrousel" type="radio"></button>
@@ -53,17 +61,12 @@ get_header();
 					
 				<?php endif ?>
 			
-		
-		
-		
-	<?php	
-	$precedent = $tPropriété['$typeCours'];
-	endwhile
-	
-	 ?>
 
-	
-</section>
+				<?php	
+				get_template_part( 'template-parts/content', 'bloc' );
+				$precedent = $tPropriété['$typeCours'];
+				endwhile; ?>
+		</section>
 	
 
 <?php endif;?>

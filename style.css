@@ -1232,16 +1232,25 @@ body.home::after {
 
 /* Carrousel
 --------------------------------------------- */
-.carrousel {
+.carrousel_2 {
   display: flex;
   width: 300vw;
   height: 20vh;
   transition: transform .5s;
   justify-content: center;
+  /*-----------------------------------------------------------------
+------------------- Les boutons radios--------------------------*/
 }
 
-.carrousel div {
-  width: 100vw;
+.carrousel_2 .slide__conteneur {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel_2 .slide__conteneur .slide {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1249,21 +1258,38 @@ body.home::after {
   color: black;
 }
 
-.carrousel div:nth-of-type(1) {
+.carrousel_2 .slide__conteneur .slide:nth-of-type(1) {
   background-color: #082E10;
 }
 
-.carrousel div:nth-of-type(2) {
+.carrousel_2 .slide__conteneur .slide:nth-of-type(2) {
   background-color: #537800;
 }
 
-.carrousel div:nth-of-type(3) {
+.carrousel_2 .slide__conteneur .slide:nth-of-type(3) {
   background-color: #A3CF25;
 }
 
-/*-----------------------------------------------------------------
-------------------- Les boutons radios--------------------------*/
-.boutons {
+.carrousel_2 .slide__conteneur .slide img {
+  display: block;
+}
+
+.carrousel_2 .slide__conteneur .slide .slide__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel_2 .slide__conteneur .slide .slide__info p {
+  font-size: .8rem;
+}
+
+.carrousel_2 .slide__conteneur .slide .slide__info a {
+  font-size: 1.5rem;
+}
+
+.carrousel_2 .boutons {
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -1271,19 +1297,19 @@ body.home::after {
   background-color: #788A76;
 }
 
-.boutons :nth-child(1),
-.boutons :nth-child(2),
-.boutons :nth-child(3) {
+.carrousel_2 .boutons :nth-child(1),
+.carrousel_2 .boutons :nth-child(2),
+.carrousel_2 .boutons :nth-child(3) {
   margin: 32px;
   width: 3rem;
   height: 3rem;
 }
 
-.boutons input {
+.carrousel_2 .boutons input {
   display: none;
 }
 
-#un, #deux, #trois {
+.carrousel_2 #un, .carrousel_2 #deux, .carrousel_2 #trois {
   width: 3rem;
   height: 3rem;
   display: flex;
