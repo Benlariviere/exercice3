@@ -21,13 +21,28 @@ get_header();
 								<p>Session : 4</p>
 							</div>
 					</article>
-					<article></article>
-					<article>Page</article>
+					<article class="slide__conteneur">
+						<div class="slide">
+							<img src="" alt="">
+							<div class="slide__info"></div>
+								<p>582-4W4-90H-Web</p>
+								<p>Conception d'interface et developpement Web</p>
+								<p>Session : 4</p>
+							</div>
+					</article>			<article class="slide__conteneur">
+						<div class="slide">
+							<img src="" alt="">
+							<div class="slide__info"></div>
+								<p>582-4W4-90H-Web</p>
+								<p>Conception d'interface et developpement Web</p>
+								<p>Session : 4</p>
+							</div>
+					</article>
 </section>
-<section class="boutons">
-				<button id="un"><input name="radCarrousel" type="radio"></button>
-				<button id="deux" ><input name="radCarrousel"  type="radio"></button>
-				<button id="trois"><input name="radCarrousel"  type="radio"></button>
+<section class="ctrl_carrousel">
+				<button id="un"><input name="radCarrousel" type="radio" checked="check"></button>
+				<button id="deux" ><input name="radCarrousel"  type="radio" checked=""></button>
+				<button id="trois"><input name="radCarrousel"  type="radio" checked=""></button>
 </section>
 
 
@@ -56,19 +71,29 @@ get_header();
 				<?php	if($precedent != "XXXXXX") :?>
 					</section>
 					<?php endif ?>
+					<?php if ($precedent =="Web") ?>
+					<section class="crtl_carrousel">
+						<?php echo $ctrl_radio ?>
+					</section>
+
 					<h2><?php echo $tPropriété['$typeCours']?></h2>
-				<section>
+					<section><?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel_2"' : 'class="bloc"')  ?>
+
 					
-				<?php endif ?>
+
+					<?php endif ?>
 			
 
-				<?php	
-				get_template_part( 'template-parts/content', 'bloc' );
-				$precedent = $tPropriété['$typeCours'];
+				<?php 
+				if ($tPropriété['typeCours'] == "Web")
+				get_template_part( 'template-parts/content', 'carrousel' );
+				$ctrl_radio .= '<input type ="radio name="rad_carrousel">';
+				else :
+					get_template_part( 'template-parts/content', 'bloc' );
+				endif;
+				 $precedent = $tPropriété['$typeCours'];
 				endwhile; ?>
-		</section>
-	
-
+		</section>	
 <?php endif;?>
 
 	</main><!-- #main -->
