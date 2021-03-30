@@ -78,7 +78,7 @@ get_header();
 					</section>
 					<?php endif; ?>
 					<h2><?php echo $tPropriété['typeCours']?></h2>
-					<section><?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel_2"' : 'class="bloc"')  ?>
+					<section <?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel_2"' : 'class="bloc"'); ?> >
 
 					
 

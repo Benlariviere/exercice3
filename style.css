@@ -1241,6 +1241,50 @@ body.home::after {
   flex-wrap: nowrap;
   /*-----------------------------------------------------------------
 ------------------- Les boutons radios--------------------------*/
+  /*.boutons {
+
+    width: 100vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: #788A76;
+    
+    
+    :nth-child(1),
+    :nth-child(2),
+    :nth-child(3) {
+        margin: 32px;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    input{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+#un,#deux,#trois {
+    
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17260A;
+    border-radius: 20%;
+    border: none;
+    
+
+}
+
+*/
 }
 
 .carrousel_2 .slide__conteneur {
@@ -1292,34 +1336,17 @@ body.home::after {
   background-color: #A3CF25;
 }
 
-.carrousel_2 .boutons {
+.ctrl_carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
+}
+
+.ctrl_carrousel input {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #788A76;
-}
-
-.carrousel_2 .boutons :nth-child(1),
-.carrousel_2 .boutons :nth-child(2),
-.carrousel_2 .boutons :nth-child(3) {
-  margin: 32px;
-  width: 3rem;
-  height: 3rem;
-}
-
-.carrousel_2 .boutons input {
-  display: none;
-}
-
-.carrousel_2 #un, .carrousel_2 #deux, .carrousel_2 #trois {
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #17260A;
-  border-radius: 20%;
-  border: none;
+  width: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

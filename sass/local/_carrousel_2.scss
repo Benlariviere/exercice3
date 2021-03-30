@@ -59,7 +59,7 @@
 
 /*-----------------------------------------------------------------
 ------------------- Les boutons radios--------------------------*/
-.boutons {
+/*.boutons {
 
     width: 100vw; 
     display: flex; 
@@ -101,6 +101,26 @@
     
 
 }
+
+*/
+}
+
+
+
+
+.ctrl_carrousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+    input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+
+    }
 
 
 }
