@@ -1,12 +1,12 @@
 .carrousel_2{
     display: flex;
-    width: 300vw;
-    height: 20vh;
+    width: 600vw;
+    height: 30vh;
     transition: transform .5s;
     justify-content: center;
     flex-wrap: nowrap;
      .slide__conteneur{
-            width: 100%;
+            width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,7 +15,7 @@
             .slide{
                 width: 90%;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
                 font-size: clamp(2rem, #{"-0.875rem + 8.333vw"}, 4rem);
                 color: black;

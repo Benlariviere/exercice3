@@ -11,7 +11,7 @@ get_header();
 ?>
 
 
-<section class="carrousel_2">
+<!--<section class="carrousel_2">
 					<article class="slide__conteneur">
 						<div class="slide">
 							<img src="" alt="">
@@ -43,7 +43,7 @@ get_header();
 				<button id="un"><input name="radCarrousel" type="radio" checked="check"></button>
 				<button id="deux" ><input name="radCarrousel"  type="radio" checked=""></button>
 				<button id="trois"><input name="radCarrousel"  type="radio" checked=""></button>
-</section>
+</section>-->
 
 
 	<main id="primary" class="site-main">
@@ -61,37 +61,38 @@ get_header();
 			
 			<?php
 			/* Start the Loop */
+			$ctrl_radio ="";
 			$precedent = "XXXXXX";
-			while(have_posts());
+			while(have_posts()):
 			the_post();
 			//Animation et  interactivité en Jeu
 
 			convertir_tableau($tPropriété);
-				if($precedent != $tPropriété['$typeCours']): ?>
+				if($precedent != $tPropriété['typeCours']): ?>
 				<?php	if($precedent != "XXXXXX") :?>
 					</section>
-					<?php endif ?>
-					<?php if ($precedent =="Web") ?>
+					<?php endif; ?>
+					<?php if ($precedent =="Web"): ?>
 					<section class="crtl_carrousel">
-						<?php echo $ctrl_radio ?>
+						<?php echo $ctrl_radio; ?>
 					</section>
-
-					<h2><?php echo $tPropriété['$typeCours']?></h2>
+					<?php endif; ?>
+					<h2><?php echo $tPropriété['typeCours']?></h2>
 					<section><?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel_2"' : 'class="bloc"')  ?>
 
 					
 
-					<?php endif ?>
+					<?php endif; ?>
 			
 
 				<?php 
-				if ($tPropriété['typeCours'] == "Web")
+				if ($tPropriété['typeCours'] == "Web"):
 				get_template_part( 'template-parts/content', 'carrousel' );
 				$ctrl_radio .= '<input type ="radio name="rad_carrousel">';
 				else :
 					get_template_part( 'template-parts/content', 'bloc' );
 				endif;
-				 $precedent = $tPropriété['$typeCours'];
+				 $precedent = $tPropriété['typeCours'];
 				endwhile; ?>
 		</section>	
 <?php endif;?>
