@@ -46,10 +46,10 @@ get_header();
 </section>-->
 
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-
+			
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -73,7 +73,7 @@ get_header();
 					</section>
 					<?php endif; ?>
 					<?php if ($precedent =="Web"): ?>
-					<section class="crtl_carrousel">
+					<section class="ctrl_carrousel">
 						<?php echo $ctrl_radio; ?>
 					</section>
 					<?php endif; ?>
@@ -88,7 +88,7 @@ get_header();
 				<?php 
 				if ($tPropriété['typeCours'] == "Web"):
 				get_template_part( 'template-parts/content', 'carrousel' );
-				$ctrl_radio .= '<input type ="radio name="rad_carrousel">';
+				$ctrl_radio .= '<input type ="radio" name="rad_carrousel">';
 				else :
 					get_template_part( 'template-parts/content', 'bloc' );
 				endif;

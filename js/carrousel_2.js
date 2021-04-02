@@ -3,14 +3,19 @@
 
 
 
-let bout = document.querySelectorAll();
-let carrousel_2 =  document.querySelectorAll('carrousel_2');
+let bout = document.querySelectorAll(".ctrl_carrousel input");
+console.log(bout.length);
+let carrousel_2 =  document.querySelector('.carrousel_2');
 let noBouton = 0;
-for(cont bt of bout){
+bout[0].checked =true;
+for(const bt of bout){
     bt.value = noBouton++;
     console.log(bt.value)
     
-    bt.addEventListener('mousdown', function(){
+    bt.addEventListener('mousedown', function(){
+        console.log(this.value)
+        console.log("Passe")
+        console.log("translateX(" + (-this.value*100) + "vw)")
         carrousel_2.style.transform = "translateX(" + (-this.value*100) + "vw)"
     })
 }
