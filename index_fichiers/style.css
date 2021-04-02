@@ -1130,14 +1130,14 @@ body.home::after {
   width: 100vw;
 }
 
-.list-cours section {
+.list-cours section.bloc {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.list-cours section article {
+.list-cours section.bloc article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1148,18 +1148,18 @@ body.home::after {
 }
 
 @media (min-width: 800px) {
-  .list-cours section article {
+  .list-cours section.bloc article {
     justify-content: space-between;
     width: 32%;
   }
 }
 
-.list-cours section article p {
+.list-cours section.bloc article p {
   font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.1rem);
   font-weight: bold;
 }
 
-.list-cours section article a {
+.list-cours section.bloc article a {
   font-size: clamp(0.7rem, -0.875rem + 8.333vw, 1.8rem);
   font-weight: bold;
   text-decoration: none;
@@ -1228,5 +1228,134 @@ body.home::after {
   background-color: #17260A;
   border-radius: 20%;
   border: none;
+}
+
+/* Carrousel
+--------------------------------------------- */
+.carrousel_2 {
+  display: flex;
+  width: 600vw;
+  height: 30vh;
+  transition: transform .5s;
+  justify-content: center;
+  flex-wrap: nowrap;
+  /*-----------------------------------------------------------------
+------------------- Les boutons radios--------------------------*/
+  /*.boutons {
+
+    width: 100vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    background-color: #788A76;
+    
+    
+    :nth-child(1),
+    :nth-child(2),
+    :nth-child(3) {
+        margin: 32px;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    input{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+
+#un,#deux,#trois {
+    
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17260A;
+    border-radius: 20%;
+    border: none;
+    
+
+}
+
+*/
+}
+
+.carrousel_2 .slide__conteneur {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.carrousel_2 .slide__conteneur .slide {
+  border-radius: 1rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 4rem);
+  color: black;
+}
+
+.carrousel_2 .slide__conteneur .slide img {
+  display: block;
+  margin: 2%;
+}
+
+.carrousel_2 .slide__conteneur .slide .slide__info {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 0;
+}
+
+.carrousel_2 .slide__conteneur .slide .slide__info p {
+  font-size: .8rem;
+  font-weight: bold;
+  justify-content: center;
+  color: #404040;
+}
+
+.carrousel_2 .slide__conteneur .slide .slide__info a {
+  font-size: 1.5rem;
+  justify-content: center;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 2.3rem);
+}
+
+.carrousel_2 .slide__conteneur .slide:nth-of-type(1) {
+  background-color: #17260A;
+}
+
+.carrousel_2 .slide__conteneur .slide:nth-of-type(2) {
+  background-color: #537800;
+}
+
+.carrousel_2 .slide__conteneur .slide:nth-of-type(3) {
+  background-color: #A3CF25;
+}
+
+.ctrl_carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.ctrl_carrousel input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

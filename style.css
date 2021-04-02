@@ -1292,6 +1292,7 @@ body.home::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5rem;
 }
 
 .carrousel_2 .slide__conteneur .slide {
