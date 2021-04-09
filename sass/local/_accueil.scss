@@ -28,6 +28,14 @@ body.home {
     height: 100vh;
     width: 100vw;
 
+   #primpary{
+    margin-left: 0;
+    width: 100vw;
+    h1{
+        text-align: center;
+    }    
+}
+
 }
 
 body.home::after {
@@ -51,6 +59,9 @@ body.home::after {
         display: flex;
         flex-direction: column;
         width: 100vw;
+        h2{
+            text-align: center;
+        }
         
         section.bloc{
             display: flex;
