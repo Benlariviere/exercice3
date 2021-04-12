@@ -74,11 +74,14 @@ get_header();
 					<?php endif; ?>
 					<?php if ($precedent =="Web"): ?>
 					<section class="ctrl_carrousel">
-						<?php echo $ctrl_radio; ?>
+						<?php echo $ctrl_radio;
+						 $ctrl_radio = '';
+						?>
+
 					</section>
 					<?php endif; ?>
 					<h2><?php echo $tPropriété['typeCours']?></h2>
-					<section <?php echo ($tPropriété['typeCours'] == 'Web' ? 'class="carrousel_2"' : 'class="bloc"'); ?> >
+					<section <?php echo (in_array($tPropriété['typeCours'], ['Web','Jeu', 'Spécifique']) ? 'class="carrousel_2"' : 'class="bloc"'); ?> >
 
 					
 
@@ -86,9 +89,9 @@ get_header();
 			
 
 				<?php 
-				if ($tPropriété['typeCours'] == "Web"):
+				if (in_array($tPropriété['typeCours'], ['Web','Jeu']) ):
 				get_template_part( 'template-parts/content', 'carrousel' );
-				$ctrl_radio .= '<input type ="radio" name="rad_carrousel">';
+				$ctrl_radio .= '<input type ="radio" name="rad_'. $tPropriété['typeCours'] .'">';
 				else :
 					get_template_part( 'template-parts/content', 'bloc' );
 				endif;
