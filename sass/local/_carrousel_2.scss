@@ -22,7 +22,11 @@
                 color: black;
                 
                 
-
+                @include tablet {
+                    & {
+                     width : 60%;
+                    } 
+                 }
     
               
                 img{

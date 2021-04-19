@@ -93,7 +93,7 @@ get_header();
 				get_template_part( 'template-parts/content', 'carrousel' );
 				$ctrl_radio .= '<input type ="radio" name="rad_'. $tPropriété['typeCours'] .'">';
 				else :
-					get_template_part( 'template-parts/content', 'bloc' );
+					get_template_part( 'template-parts/content', 'cours-article' );
 				endif;
 				 $precedent = $tPropriété['typeCours'];
 				endwhile; ?>
