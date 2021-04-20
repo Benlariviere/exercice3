@@ -11,48 +11,14 @@ get_header();
 ?>
 
 
-<!--<section class="carrousel_2">
-					<article class="slide__conteneur">
-						<div class="slide">
-							<img src="" alt="">
-							<div class="slide__info"></div>
-								<p>582-4W4-90H-Web</p>
-								<p>Conception d'interface et developpement Web</p>
-								<p>Session : 4</p>
-							</div>
-					</article>
-					<article class="slide__conteneur">
-						<div class="slide">
-							<img src="" alt="">
-							<div class="slide__info"></div>
-								<p>582-4W4-90H-Web</p>
-								<p>Conception d'interface et developpement Web</p>
-								<p>Session : 4</p>
-							</div>
-					</article>			<article class="slide__conteneur">
-						<div class="slide">
-							<img src="" alt="">
-							<div class="slide__info"></div>
-								<p>582-4W4-90H-Web</p>
-								<p>Conception d'interface et developpement Web</p>
-								<p>Session : 4</p>
-							</div>
-					</article>
-</section>
-<section class="ctrl_carrousel">
-				<button id="un"><input name="radCarrousel" type="radio" checked="check"></button>
-				<button id="deux" ><input name="radCarrousel"  type="radio" checked=""></button>
-				<button id="trois"><input name="radCarrousel"  type="radio" checked=""></button>
-</section>-->
-
-
 <main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 			
 			<header class="page-header">
+				<h1 class="page-title">Accueil</h1>
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				//the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->

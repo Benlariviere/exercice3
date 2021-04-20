@@ -11,10 +11,24 @@ global $tPropriété;
 
 <article>
 
-<a href="<?php echo get_permalink() ?>"> <?php the_post_thumbnail( 'thumbnail' );?> </a>
+
 <div class="galerie_info">
 <?php the_title();?>
 
 </div>
      
+</article>
+<article class="flip-card">
+
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+    </div>
+    <div class="flip-card-back">
+      <h1><a href="<?php echo get_permalink() ?>"><?php the_title(); ?> </a></h1> 
+     
+    </div>
+  </div>
+</div>
+
+
 </article>
